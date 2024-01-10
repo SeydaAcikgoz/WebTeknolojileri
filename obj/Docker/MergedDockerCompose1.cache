@@ -1,0 +1,16 @@
+name: dockercompose13547536296227681793
+services:
+  saglikapplication:
+    build:
+      context: C:\Users\90505\source\repos\web_odev\SaglikApplication\SaglikApplication
+      dockerfile: Dockerfile
+    image: saglikapplication
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose13547536296227681793_default

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SaglikkDBModelStoreContainer" CdmEntityContainer="SaglikkDBEntities">
+    <EntitySetMapping Name="Doktor">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Doktor">
+        <MappingFragment StoreEntitySet="Doktor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Hastane_ID" ColumnName="Hastane_ID" />
+          <ScalarProperty Name="Poliklinik_ID" ColumnName="Poliklinik_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Giris">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Giris">
+        <MappingFragment StoreEntitySet="Giris">
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hasta">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Hasta">
+        <MappingFragment StoreEntitySet="Hasta">
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Dogum_Tarihi" ColumnName="Dogum_Tarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hastalik">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Hastalik">
+        <MappingFragment StoreEntitySet="Hastalik">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hastane">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Hastane">
+        <MappingFragment StoreEntitySet="Hastane">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Sehir_ID" ColumnName="Sehir_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ilac">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Ilac">
+        <MappingFragment StoreEntitySet="Ilac">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Hastalik_ID" ColumnName="Hastalik_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Poliklinik">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Poliklinik">
+        <MappingFragment StoreEntitySet="Poliklinik">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Randevu">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Randevu">
+        <MappingFragment StoreEntitySet="Randevu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Dr_ID" ColumnName="Dr_ID" />
+          <ScalarProperty Name="Polklinik_ID" ColumnName="Polklinik_ID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sehir">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Sehir">
+        <MappingFragment StoreEntitySet="Sehir">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SaglikkDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tahlil">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Tahlil">
+        <MappingFragment StoreEntitySet="Tahlil">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Tahlil_Tur" ColumnName="Tahlil_Tur" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Glikoz" ColumnName="Glikoz" />
+          <ScalarProperty Name="Protein" ColumnName="Protein" />
+          <ScalarProperty Name="Ürebilinojen" ColumnName="Ürebilinojen" />
+          <ScalarProperty Name="B12" ColumnName="B12" />
+          <ScalarProperty Name="Demir" ColumnName="Demir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tahlil_Tur">
+      <EntityTypeMapping TypeName="SaglikkDBModel.Tahlil_Tur">
+        <MappingFragment StoreEntitySet="Tahlil_Tur">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tur" ColumnName="Tur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

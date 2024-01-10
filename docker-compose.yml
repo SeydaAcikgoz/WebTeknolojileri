@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  saglikapplication:
+    image: ${DOCKER_REGISTRY-}saglikapplication
+    build:
+      context: .\SaglikApplication
+      dockerfile: Dockerfile
+     

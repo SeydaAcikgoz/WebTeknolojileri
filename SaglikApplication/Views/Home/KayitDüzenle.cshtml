@@ -1,0 +1,143 @@
+﻿@model SaglikApplication.Models.DuzenleClass
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 400px;
+            margin: 100px;
+        }
+
+        .login-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .login-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .form-group select,
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+        .login-body button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .login-body button:hover {
+                background-color: #4cae4c;
+            }
+
+        .alert {
+            margin-top: 20px;
+        }
+    </style>
+    <title>Login Sayfası</title>
+</head>
+
+<body>
+    <div class="login-container">
+
+        <form method="post" action="/Home/KayitDüzenle" class="login-body">
+            <input type="hidden" name="id" value="@Model.duzenlenecekKayit.TC" />
+
+            <div class="form-group">
+                <label for="hastaSelect">Hastalar</label>
+                <select class="form-control" id="hastaSelect" name="hastaTC">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in Model.hastas)
+                    {
+                        <option value="@item.TC" @(item.TC == Model.duzenlenecekKayit.TC ? "selected" : "")>
+                            @item.Ad @item.Soyad
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="doktorSelect">Doktorlar</label>
+                <select class="form-control" id="doktorSelect" name="doktorID">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in Model.doktors)
+                    {
+                        <option value="@item.ID" @(item.ID == Model.duzenlenecekKayit.Dr_ID ? "selected" : "")>
+                            @item.Ad @item.Soyad
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tarih">Tarih</label>
+                <input type="date" class="form-control" id="tarih" name="tarih" />
+            </div>
+
+            <div class="form-group">
+                <label for="poliklinikSelect">Poliklinik</label>
+                <select class="form-control" id="poliklinikSelect" name="poliklinikID">
+                    <option value="">Seçiniz</option>
+                    @foreach (var item in Model.polikliniks)
+                    {
+                        <option value="@item.ID" @(item.ID == Model.duzenlenecekKayit.Polklinik_ID ? "selected" : "")>
+                            @item.Ad
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <button class="btn btn-success" type="submit">Kaydet</button>
+        </form>
+
+    </div>
+</body>
+</html>
+
+
+

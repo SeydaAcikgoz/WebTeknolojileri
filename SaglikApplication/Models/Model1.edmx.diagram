@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9391dc2db6ef47d18c54e7b32afcb045" Name="Diagram1">
+        <EntityTypeShape EntityType="SaglikkDBModel.Doktor" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Giris" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Hasta" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Hastalik" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Hastane" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Ilac" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Poliklinik" Width="1.5" PointX="1.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Randevu" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Sehir" Width="1.5" PointX="1.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Tahlil" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SaglikkDBModel.Tahlil_Tur" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Doktor_Hastane" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Doktor_Poliklinik" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Randevu_Doktor" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Giris_Hasta" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Ilac_Hasta" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Randevu_Hasta" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Tahlil_Hasta" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Ilac_Hastalik" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Hastane_Sehir" ManuallyRouted="false" />
+        <AssociationConnector Association="SaglikkDBModel.FK_Tahlil_Tahlil_Tur" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

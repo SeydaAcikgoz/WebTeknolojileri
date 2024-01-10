@@ -1,0 +1,141 @@
+﻿@model SaglikApplication.Models.LoginClass
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                display: flex;
+                flex-direction:row;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .login-container {
+                background-color: #3498db;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 400px;
+                margin: 100px;
+            }
+
+            .login-header  {
+                background-color: #3498db;
+                color: #fff;
+                padding: 30px;
+                text-align: center;
+            }
+
+            .login-body  {
+                padding: 100px;
+            }
+
+                .login-body  input {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+
+                .login-body  {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #3498db;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+               .login-body button:hover {
+                     background-color: forestgreen;
+               }
+
+                    .login-body button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #f4932c;
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+
+                    .login-body a {
+                        color: white;
+                        text-decoration: none;
+                    }
+
+
+        </style>
+        <title>Login Sayfası</title>
+    </head>
+
+    <body>
+        <div class="login-container">
+            <form method="post" action="/Home/LoginKontrol">
+                <div class="login-header">
+                    <h2>Giriş Yap</h2>
+                </div>
+                <div class="login-body">
+                    <label for="tc">TC Kimlik Numarası:</label>
+                    <input type="number" class="form-control" id="hastaTC" name="hastaTC">
+                </div>
+
+                <div class="login-body">
+                    <label for="tc">Şifre:</label>
+                    <input type="password" class="form-control" id="sifre" name="sifre">
+                </div>
+
+
+
+                <div class="login-body">
+                    <button class="btn btn-success" type="submit">Giriş Yap</button>
+                </div>
+
+                <br />
+                <br />
+                <br />
+                <br />
+
+
+            </form>
+
+            <div class="login-body">
+                <label for="tc">Hesabın Yoksa</label>
+                <form method="post" action="/Home/YeniHasta">
+                    <button type="submit" class="btn btn-success pull-right" style="margin-bottom: 15px;"> Kayıt Ol </button>
+                </form>
+            </div>
+        </div>
+
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                <p style="color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; padding: 10px; border-radius: 5px;">
+                    @TempData["ErrorMessage"]
+                </p>
+            </div>
+        }
+
+
+    </body>
+    </html>
+
+
+
+
